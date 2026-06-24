@@ -17,3 +17,5 @@ const Student = {
         return pool.query('DELETE FROM student WHERE id = ?', [id]);
     }
 };
+
+module.exports = Student;

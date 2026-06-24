@@ -1,3 +1,4 @@
+import Register from "./Register";
 function Home() {
   return (
     <>
@@ -7,7 +8,7 @@ function Home() {
             <h1>Student Management System</h1>
             <p>Manage your students with ease</p>
           </div>
-            
+            <Register />
         </div>
       </section>
     </>

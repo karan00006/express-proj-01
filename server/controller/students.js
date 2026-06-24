@@ -1,4 +1,4 @@
-const Student = require('../models/student');
+const Student = require('../model/student');
 const studentsController = {
     getAll: async (req, res) => {
         try {

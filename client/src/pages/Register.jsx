@@ -1,3 +1,4 @@
+import Regform from '../components/Regform';
 function Register() {
   return (
     <>
@@ -7,7 +8,7 @@ function Register() {
             <h2>Register</h2>
             <p>Manage your students with ease</p>
           </div>
-             
+          <Regform />
         </div>
       </section>
     </>
