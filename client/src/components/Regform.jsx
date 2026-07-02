@@ -33,6 +33,15 @@ function Regform() {
       })
       .finally(() => {
         setSubmitting(false);
+        setForm({
+          name: "",
+          email: "",
+          password: "",
+        });
+        setError("");
+        setSuccess(false);
+        // redirect to login page after successful registration
+        window.location.href = "/login";
       });
   };
 
@@ -40,7 +49,11 @@ function Regform() {
     <>
       <form className="regform" onSubmit={handleSubmit}>
         {error && <div className="alert alert-danger">{error}</div>}
-        {success && <div className="alert alert-success">Student registered successfully!</div>}
+        {success && (
+          <div className="alert alert-success">
+            Student registered successfully!
+          </div>
+        )}
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input

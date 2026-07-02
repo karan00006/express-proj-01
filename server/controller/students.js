@@ -22,7 +22,9 @@ const studentsController = {
     create: async (req, res) => {
         try {
             const [result] = await Student.create(req.body);
-            res.status(201).json({ id: result.insertId, ...req.body });
+            // res.status(201).json({ id: result.insertId, ...req.body });
+            res.redirect('/login');
+
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
